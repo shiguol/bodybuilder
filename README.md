@@ -5,6 +5,11 @@ Xcode Plugin for creating initial versions of method bodies.
 
 ![](screenshot.gif)
 
+Install
+-------
+
+Install `BodyBuilder` with [Alcatraz Package Manager](http://alcatraz.io/).
+
 Usage
 -----
 
