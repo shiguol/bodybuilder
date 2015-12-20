@@ -8,8 +8,6 @@
 
 #import "BodyBuilder.h"
 
-#import "DTXcodeHeaders.h"
-#import "DTXcodeUtils.h"
 #import "Parser.h"
 
 static BodyBuilder *_sharedPlugin;
@@ -79,19 +77,22 @@ static NSString *const kKeyEquivalent = @"B";
 - (void)action {
     NSString *parsedCode = [Parser parseCode:[self currentLineOfCode]];
     if (parsedCode) {
-        [[DTXcodeUtils currentTextStorage] beginEditing];
-        [[DTXcodeUtils currentTextStorage] replaceCharactersInRange:self.currentLineRange withString:parsedCode];
-        [[DTXcodeUtils currentTextStorage] endEditing];
+        NSUndoManager *undoManager = [[DCXcodeUtils currentSourceCodeDocument] undoManager];
+        [[DCXcodeUtils currentTextStorage] beginEditing];
+        [[DCXcodeUtils currentTextStorage] replaceCharactersInRange:self.currentLineRange
+                                                         withString:parsedCode
+                                                    withUndoManager:undoManager];
+        [[DCXcodeUtils currentTextStorage] endEditing];
     }
 }
 
 - (NSRange)currentLineRange {
-    DVTSourceTextView *sourceTextView = [DTXcodeUtils currentSourceTextView];
+    DVTSourceTextView *sourceTextView = [DCXcodeUtils currentSourceTextView];
     return [sourceTextView.string lineRangeForRange:NSMakeRange(sourceTextView.selectedRange.location, 0)];
 }
 
 - (NSString *)currentLineOfCode {
-    DVTSourceTextView *sourceTextView = [DTXcodeUtils currentSourceTextView];
+    DVTSourceTextView *sourceTextView = [DCXcodeUtils currentSourceTextView];
     return [sourceTextView.textStorage.string substringWithRange:self.currentLineRange];
 }
 

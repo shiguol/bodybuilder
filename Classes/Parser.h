@@ -6,8 +6,6 @@
 //  Copyright © 2015 Materik AB. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface Parser : NSObject
 
 + (NSString *)parseCode:(NSString *)code;

@@ -6,8 +6,6 @@
 //  Copyright © 2015 Materik AB. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
-
 @interface BodyBuilder : NSObject
 
 @end

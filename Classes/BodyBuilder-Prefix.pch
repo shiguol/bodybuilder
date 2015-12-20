@@ -1,0 +1,17 @@
+//
+//  BodyBuilder-PrefixHeader.pch
+//  BodyBuilder
+//
+//  Created by materik on 20/12/15.
+//  Copyright © 2015 Materik AB. All rights reserved.
+//
+
+#ifndef BodyBuilder_Prefix_pch
+#define BodyBuilder_Prefix_pch
+
+#import <AppKit/AppKit.h>
+#import <Foundation/Foundation.h>
+#import "DCXcodeHeader.h"
+#import "DCXcodeUtils.h"
+
+#endif
