@@ -12,7 +12,7 @@
 		C14B01D31C2328700025FC9B /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = C14B01D21C2328700025FC9B /* NSString+Helper.m */; };
 		C1A64FCE1C1E1E6D007F1C53 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A64FCD1C1E1E6D007F1C53 /* AppKit.framework */; };
 		C1A64FD01C1E1E6D007F1C53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A64FCF1C1E1E6D007F1C53 /* Foundation.framework */; };
-		C1A64FD71C1E1E6D007F1C53 /* Plugin.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A64FD61C1E1E6D007F1C53 /* Plugin.m */; };
+		C1A64FD71C1E1E6D007F1C53 /* BodyBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A64FD61C1E1E6D007F1C53 /* BodyBuilder.m */; };
 		C1EBA9EF1C2338A30089CDFA /* LazyParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA9EE1C2338A30089CDFA /* LazyParserTests.m */; };
 		C1EBA9F61C23399A0089CDFA /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA9F51C23399A0089CDFA /* Parser.m */; };
 		C1EBA9F71C233C270089CDFA /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA9F51C23399A0089CDFA /* Parser.m */; };
@@ -30,8 +30,8 @@
 		C1A64FCA1C1E1E6D007F1C53 /* BodyBuilder.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BodyBuilder.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A64FCD1C1E1E6D007F1C53 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		C1A64FCF1C1E1E6D007F1C53 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		C1A64FD51C1E1E6D007F1C53 /* Plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plugin.h; sourceTree = "<group>"; };
-		C1A64FD61C1E1E6D007F1C53 /* Plugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plugin.m; sourceTree = "<group>"; };
+		C1A64FD51C1E1E6D007F1C53 /* BodyBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BodyBuilder.h; sourceTree = "<group>"; };
+		C1A64FD61C1E1E6D007F1C53 /* BodyBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BodyBuilder.m; sourceTree = "<group>"; };
 		C1A64FDB1C1E1E6D007F1C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1EBA9EC1C2338A30089CDFA /* BodyBuilder.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BodyBuilder.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EBA9EE1C2338A30089CDFA /* LazyParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LazyParserTests.m; sourceTree = "<group>"; };
@@ -111,8 +111,8 @@
 				C14B01D21C2328700025FC9B /* NSString+Helper.m */,
 				C1EBA9F41C23399A0089CDFA /* Parser.h */,
 				C1EBA9F51C23399A0089CDFA /* Parser.m */,
-				C1A64FD51C1E1E6D007F1C53 /* Plugin.h */,
-				C1A64FD61C1E1E6D007F1C53 /* Plugin.m */,
+				C1A64FD51C1E1E6D007F1C53 /* BodyBuilder.h */,
+				C1A64FD61C1E1E6D007F1C53 /* BodyBuilder.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1A64FD71C1E1E6D007F1C53 /* Plugin.m in Sources */,
+				C1A64FD71C1E1E6D007F1C53 /* BodyBuilder.m in Sources */,
 				C1EBA9F61C23399A0089CDFA /* Parser.m in Sources */,
 				C14B01D31C2328700025FC9B /* NSString+Helper.m in Sources */,
 			);

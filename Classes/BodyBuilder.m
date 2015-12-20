@@ -1,35 +1,35 @@
 //
-//  Plugin.m
-//  Plugin
+//  BodyBuilder.m
+//  BodyBuilder
 //
 //  Created by materik on 13/12/15.
 //  Copyright © 2015 Materik AB. All rights reserved.
 //
 
-#import "Plugin.h"
+#import "BodyBuilder.h"
 
 #import "DTXcodeHeaders.h"
 #import "DTXcodeUtils.h"
 #import "Parser.h"
 
-static Plugin *_sharedPlugin;
+static BodyBuilder *_sharedPlugin;
 static NSString *const kMenuTitle = @"Edit";
 static NSString *const kMenuItemTitle = @"BodyBuilder";
 static NSString *const kKeyEquivalent = @"B";
 
-@interface Plugin ()
+@interface BodyBuilder ()
 
 @property(nonatomic, strong) NSBundle *bundle;
 
 @end
 
-@implementation Plugin
+@implementation BodyBuilder
 
 + (void)pluginDidLoad:(NSBundle *)plugin {
     static dispatch_once_t onceToken;
     if ([[[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleName"] isEqual:@"Xcode"]) {
         dispatch_once(&onceToken, ^{
-          _sharedPlugin = [[Plugin alloc] initWithBundle:plugin];
+          _sharedPlugin = [[BodyBuilder alloc] initWithBundle:plugin];
         });
     }
 }
